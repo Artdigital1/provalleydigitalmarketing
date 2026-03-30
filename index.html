@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProValley Digital Marketing — Google Ads & PPC Agency | McAllen, TX</title>
-  <meta name="description" content="ProValley Digital Marketing helps McAllen & RGV businesses maximize ROI with Google Ads, PPC management, and local SEO. Get a free strategy call today." />
+  <title>Google Ads &amp; SEO Agency McAllen TX | ProValley Digital Marketing</title>
+  <meta name="description" content="ProValley Digital Marketing helps RGV businesses grow with Google Ads, SEO, and conversion-optimized websites. McAllen, TX. Free strategy call." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.provalleydigitalmarketing.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.provalleydigitalmarketing.com/" />
-  <meta property="og:title" content="ProValley Digital Marketing — Google Ads & PPC Agency | McAllen, TX" />
-  <meta property="og:description" content="Transform your ad spend into revenue. ProValley delivers Google Ads management, PPC, and local SEO for RGV businesses." />
+  <meta property="og:title" content="Google Ads &amp; SEO Agency McAllen TX | ProValley Digital Marketing" />
+  <meta property="og:description" content="ProValley Digital Marketing helps RGV businesses grow with Google Ads, SEO, and conversion-optimized websites. McAllen, TX. Free strategy call." />
   <meta property="og:image" content="https://www.provalleydigitalmarketing.com/og-image.jpg" />
 
   <!-- Twitter Card -->
@@ -53,9 +53,7 @@
   }
   </script>
 
-  <!-- GA4 Placeholder -->
-  <!-- Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <!--
+  <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -63,7 +61,6 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
-  -->
 
   <style>
     /* ============================================
@@ -725,6 +722,25 @@
     }
     .footer-links { display: flex; gap: 24px; }
     .footer-links a:hover { color: var(--white); }
+
+    /* ============================================
+       FORM SUCCESS STATE
+    ============================================ */
+    .form-success {
+      background: #e8f5e9;
+      border: 1.5px solid #a5d6a7;
+      color: #2e7d32;
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 12px;
+    }
+    .form-submit[disabled] {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
   </style>
 </head>
 <body>
@@ -780,33 +796,39 @@
         </div>
         <!-- HERO FORM -->
         <div class="hero-form-card">
-          <h3>Get a Free Google Ads Audit</h3>
-          <p>Find out exactly where your budget is leaking — no strings attached.</p>
-          <form action="https://formspree.io/f/REPLACE_WITH_YOUR_FORMSPREE_ID" method="POST">
+          <h3>Get a Free Strategy Call</h3>
+          <p>Tell us about your business — Artie will respond within 24 hours.</p>
+          <form id="hero-form" action="https://formspree.io/f/xkoprlwo" method="POST" novalidate>
             <div class="form-group">
-              <label for="h-name">Full Name</label>
-              <input type="text" id="h-name" name="name" placeholder="Artie Martinez" required />
+              <label for="h-name">Full Name *</label>
+              <input type="text" id="h-name" name="name" placeholder="Your name" required />
             </div>
             <div class="form-group">
-              <label for="h-email">Business Email</label>
+              <label for="h-email">Email *</label>
               <input type="email" id="h-email" name="email" placeholder="you@business.com" required />
             </div>
             <div class="form-group">
-              <label for="h-phone">Phone</label>
-              <input type="tel" id="h-phone" name="phone" placeholder="(956) 000-0000" />
+              <label for="h-phone">Phone Number *</label>
+              <input type="tel" id="h-phone" name="phone" placeholder="(956) 000-0000" required />
             </div>
             <div class="form-group">
-              <label for="h-service">Primary Need</label>
-              <select id="h-service" name="service">
+              <label for="h-service">Service Needed *</label>
+              <select id="h-service" name="service" required>
                 <option value="">Select a service...</option>
-                <option>Google Ads Management</option>
-                <option>Google Local Service Ads</option>
-                <option>E-commerce Advertising</option>
-                <option>Media Buying</option>
-                <option>Full PPC Strategy</option>
+                <option value="Google Ads">Google Ads</option>
+                <option value="SEO">SEO</option>
+                <option value="Website Design">Website Design</option>
+                <option value="PPC Management">PPC Management</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary form-submit">Get My Free Audit →</button>
+            <div class="form-group">
+              <label for="h-message">Tell me about your business *</label>
+              <textarea id="h-message" name="message" rows="3" placeholder="What are your main goals? Current ad spend? Industry?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">Get My Free Strategy Call</button>
+            <div id="hero-form-success" class="form-success" style="display:none;">
+              Thanks! Artie will reach out within 24 hours.
+            </div>
           </form>
           <p class="form-note">🔒 No spam. No commitment. Response within 24 hours.</p>
         </div>
@@ -1144,7 +1166,7 @@
         </div>
         <div class="contact-form-card">
           <h3>Start the Conversation</h3>
-          <form action="https://formspree.io/f/REPLACE_WITH_YOUR_FORMSPREE_ID" method="POST">
+          <form id="contact-form" action="https://formspree.io/f/xkoprlwo" method="POST" novalidate>
             <div class="form-group">
               <label>Full Name *</label>
               <input type="text" name="name" placeholder="Your name" required />
@@ -1154,28 +1176,27 @@
               <input type="email" name="email" placeholder="you@company.com" required />
             </div>
             <div class="form-group">
-              <label>Phone</label>
-              <input type="tel" name="phone" placeholder="(956) 000-0000" />
+              <label>Phone Number *</label>
+              <input type="tel" name="phone" placeholder="(956) 000-0000" required />
             </div>
             <div class="form-group">
-              <label>Website URL</label>
-              <input type="url" name="website" placeholder="https://yourbusiness.com" />
-            </div>
-            <div class="form-group">
-              <label>Monthly Ad Budget</label>
-              <select name="budget">
-                <option value="">Select range...</option>
-                <option>Under $1,000/mo</option>
-                <option>$1,000–$5,000/mo</option>
-                <option>$5,000–$15,000/mo</option>
-                <option>$15,000+/mo</option>
+              <label>Service Needed *</label>
+              <select name="service" required>
+                <option value="">Select a service...</option>
+                <option value="Google Ads">Google Ads</option>
+                <option value="SEO">SEO</option>
+                <option value="Website Design">Website Design</option>
+                <option value="PPC Management">PPC Management</option>
               </select>
             </div>
             <div class="form-group">
-              <label>What Are Your Goals?</label>
-              <textarea name="goals" rows="3" placeholder="More leads, lower CPL, launch new campaigns..."></textarea>
+              <label>Tell me about your business *</label>
+              <textarea name="message" rows="4" placeholder="What are your main goals? Current ad spend? Industry?" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary form-submit">Send My Request →</button>
+            <button type="submit" class="btn btn-primary form-submit">Get My Free Strategy Call</button>
+            <div id="contact-form-success" class="form-success" style="display:none;">
+              Thanks! Artie will reach out within 24 hours.
+            </div>
           </form>
         </div>
       </div>
@@ -1234,6 +1255,50 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // AJAX form submission — no redirect to Formspree
+    function handleFormSubmit(formEl, successEl) {
+      formEl.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = formEl.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+
+        try {
+          const data = new FormData(formEl);
+          const res = await fetch(formEl.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            formEl.reset();
+            formEl.style.display = 'none';
+            successEl.style.display = 'block';
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Get My Free Strategy Call';
+            alert('Something went wrong. Please try again or call (956) 261-5921.');
+          }
+        } catch (err) {
+          btn.disabled = false;
+          btn.textContent = 'Get My Free Strategy Call';
+          alert('Network error. Please try again or call (956) 261-5921.');
+        }
+      });
+    }
+
+    handleFormSubmit(
+      document.getElementById('hero-form'),
+      document.getElementById('hero-form-success')
+    );
+    handleFormSubmit(
+      document.getElementById('contact-form'),
+      document.getElementById('contact-form-success')
+    );
+  </script>
 
 </body>
 </html>
